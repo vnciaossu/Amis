@@ -484,7 +484,7 @@ export default {
         await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
         this.isLoading = false;
       }
-
+      if (this.messageAlert != "") return;
       // lưu thông tin
       if (this.employee.EmployeeId) {
         //cập nhật
@@ -582,7 +582,7 @@ export default {
      */
     checkBlankText(obj) {
       obj.forEach((element) => {
-        if (this.$refs[element.key].value == "") {
+        if (this.$refs[element.key].value.trim() == "") {
           this.$refs[element.key].classList.add("isValid");
           this.$refs[element.key].setAttribute("title", element.text);
           this.messageAlert += this.messageAlert == "" ? element.text : "";
@@ -654,10 +654,10 @@ export default {
      * CreatedBy:tmquy(18/05/2021)
      */
     onCloseShowAlert() {
-      if (
-        this.employee.EmployeeName != null ||
-        this.employee.DepartmentId != null
-      ) {
+      var eName = this.employee.EmployeeName;
+      console.log(eName);
+      var dId = this.employee.DepartmentId;
+      if (eName != null || dId != null) {
         this.isShowAlert = true;
         this.messageAlert = "Dữ liệu đã bị thay đổi. Bạn có muốn cất không?";
         this.iconCls = "icon-change";

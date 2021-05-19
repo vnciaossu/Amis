@@ -440,7 +440,10 @@ export default {
       this.title = "THÔNG TIN NHÂN VIÊN";
       this.$store.commit("toggleDialog");
       this.$nextTick(function() {
-        this.$refs.detail.$refs.EmployeeCode.focus();
+        this.$refs.detail.$refs.EmployeeCode.setAttribute(
+          "disabled",
+          "disabled"
+        );
       });
     },
 
