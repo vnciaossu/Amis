@@ -443,15 +443,14 @@ export default {
      * Lưu thông tin (Cất dữ liệu)
      * CreatedBy: tmquy(17/05/2021)
      * */
-    onSave() {
+    async onSave() {
       //Validate
       this.messageAlert = "";
       this.validateToSave();
       if (!this.employee.EmployeeId) {
-        this.checkEmployeeCodeExist(this.employee.EmployeeCode);
+        await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
         this.isLoading = false;
       }
-
       //Lưu dữ liệu vào onDataSave EmployeeList
       if (this.messageAlert == "") {
         this.$emit("onDataSave", this.employee);
@@ -480,10 +479,10 @@ export default {
       var url = "";
       //Validate
       this.validateToSave();
-      if (!this.employee.EmployeeId) {
-        await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
-        this.isLoading = false;
-      }
+
+      await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
+      this.isLoading = false;
+
       if (this.messageAlert != "") return;
       // lưu thông tin
       if (this.employee.EmployeeId) {
