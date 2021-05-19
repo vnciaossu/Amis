@@ -48,7 +48,6 @@
                   class="m-input"
                   ref="EmployeeCode"
                   v-model="employee.EmployeeCode"
-                  @input="checkEmployeeCodePresent($event.target.value)"
                   @blur="
                     checkBlankText([
                       { key: 'EmployeeCode', text: 'Mã không được để trống' },
@@ -485,17 +484,20 @@ export default {
       if (this.messageAlert != "") return;
       // lưu thông tin
       if (this.employee.EmployeeId) {
-        var check = this.checkEmployeeCodePresent();
-        if (!check) {
-          await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
-          this.isLoading = false;
-        }
+        // var check = this.checkEmployeeCodePresent();
         //cập nhật
         url = `${this.API_HOST}/api/v1/Employees?entityId=${this.employee.EmployeeId}`;
-        await axios.put(url, this.employee);
-        this.onClose();
-        this.onLoadEmployee();
-        this.isLoading = false;
+        await axios
+          .put(url, this.employee)
+          .then(() => {
+            this.onClose();
+            this.onLoadEmployee();
+            this.isLoading = false;
+          })
+          .catch(() => {
+            this.checkEmployeeCodeExist(this.employee.EmployeeCode);
+            this.isLoading = false;
+          });
       } else {
         await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
         this.isLoading = false;
@@ -625,18 +627,6 @@ export default {
         this.isShowAlert = true;
       }
     },
-    /**
-     *Lấy mã nhân viên nhập
-     * @param employeeCode Mã nhân viên
-     * CreatedBy: tmquy(19/05/2021)
-     */
-    checkEmployeeCodePresent(employeeCode) {
-      if (employeeCode != this.employee.employeeCode) {
-        return true;
-      } else {
-        return false;
-      }
-    },
 
     /**
      * Đóng alert
@@ -672,7 +662,6 @@ export default {
      */
     onCloseShowAlert() {
       var eName = this.employee.EmployeeName;
-      console.log(eName);
       var dId = this.employee.DepartmentId;
       if (eName != null || dId != null) {
         this.isShowAlert = true;
