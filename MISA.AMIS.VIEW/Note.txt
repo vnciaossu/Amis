@@ -1,0 +1,4 @@
+1.sửa lại phân trang
+2.validate chỉ nhập số
+3.chức năng cất và thêm mới
+4.toggle sidebar

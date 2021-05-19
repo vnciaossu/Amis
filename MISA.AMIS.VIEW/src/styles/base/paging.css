@@ -1,0 +1,65 @@
+.page-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.paging-number:hover {
+  background-color: #babec5;
+}
+.paging-number:disabled:hover {
+  background-color: black;
+}
+
+.page_active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  border: 1px solid #babec5;
+  cursor: pointer;
+}
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  z-index: 6;
+  background-color: #fff;
+  display: flex;
+  min-height: 47px;
+  padding-left: 16px;
+  padding-right: 30px;
+  width: 93%;
+  justify-content: space-between;
+}
+
+.pagination .select {
+  justify-content: space-between;
+}
+
+.pagination .select select {
+  margin: 0 16px;
+  width: 200px;
+  min-width: 200px;
+  min-height: 32px;
+  border: 1px solid #babec5;
+  border-radius: 2px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.right-5 {
+  right: 5px;
+}
+
+.m-dropdown--menu {
+  position: absolute;
+  background-color: #fff;
+}

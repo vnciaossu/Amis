@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\base",
+    "\\src\\components\\pagination",
+    "\\src\\views",
+    "\\src\\views\\dictionary"
+  ],
+  "SelectedNode": "\\src\\components\\base\\ContextMenu.vue",
+  "PreviewInSolutionExplorer": false
+}

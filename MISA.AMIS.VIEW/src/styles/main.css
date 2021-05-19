@@ -1,0 +1,44 @@
+@import url(./base/table.css);
+@import url(./base/input.css);
+@import url(./base/button.css);
+@import url(./base/paging.css);
+@import url(./base/scrollbar.css);
+@import url(./base/icon.css);
+@import url(./base/dialog.css);
+
+body {
+  padding: 0;
+  margin: 0;
+}
+body * {
+  font-family: notosans-regular, notosans-bold, notosans-italic,
+    notosans-semibold;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "notosans-bold";
+  src: url("../assets/fonts/notosans-bold.3ede5aff.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: "notosans-italic";
+  src: url("../assets/fonts/notosans-italic.1c1aaac9.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: "notosans-regular";
+  src: url("../assets/fonts/notosans-regular.2cb88a13.woff2") format("opentype");
+}
+
+@font-face {
+  font-family: "notosans-semibold";
+  src: url("../assets/fonts/notosans-semibold.df3e6dc4.woff2")
+    format("opentype");
+}

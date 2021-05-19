@@ -1,0 +1,119 @@
+.icon-add {
+  width: 16px;
+  height: 16px;
+}
+
+.icon-refresh {
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+
+.icon-warning-alert {
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  min-width: 48px;
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -592px -456px;
+}
+
+.icon-question-mark {
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  min-width: 48px;
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -826px -456px;
+}
+
+.icon-error {
+  width: 48px;
+  height: 48px;
+  min-height: 48px;
+  min-width: 48px;
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -24px -954px;
+}
+
+.icon-error-exits {
+  width: 36px;
+  height: 37px;
+  min-height: 36px;
+  min-width: 36px;
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -598px -463px;
+}
+.icon-arrow-up {
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -896px -359px;
+}
+
+.body-left .menu .menu-item .icon-overview {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -30px -1628px;
+}
+
+.body-left .menu .menu-item .icon-money {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -73px -1628px;
+}
+
+.body-left .menu .menu-item .icon-purchase {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -161px -1628px;
+}
+
+.body-left .menu .menu-item .icon-deposit {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -117px -1628px;
+}
+
+.body-left .menu .menu-item .icon-sell {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -204px -1628px;
+}
+
+.body-left .menu .menu-item .icon-bill {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -249px -1628px;
+}
+
+.body-left .menu .menu-item .icon-storeroom {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -291px -1628px;
+}
+
+.body-left .menu .menu-item .icon-tool {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -336px -1628px;
+}
+
+.body-left .menu .menu-item .icon-asset {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -378px -1630px;
+}
+
+.body-left .menu .menu-item .icon-tax {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -423px -1630px;
+}
+
+.body-left .menu .menu-item .icon-price {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -467px -1628px;
+}
+
+.body-left .menu .menu-item .icon-general {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -510px -1628px;
+}
+
+.body-left .menu .menu-item .icon-budget {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -378px -1659px;
+}
+
+.body-left .menu .menu-item .icon-report {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -547px -1628px;
+}
+
+.body-left .menu .menu-item .icon-analyst {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -204px -1664px;
+}
+
+.body-left .menu .menu-item .item-name {
+  width: 150px;
+}
+
+.icon-change {
+  background: url("../../assets/img/Sprites.64af8f61.svg") no-repeat -832px -462px;
+  width: 36px;
+  height: 36px;
+}

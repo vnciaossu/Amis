@@ -1,0 +1,133 @@
+.m-item-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-input {
+  border: 1px solid #babec5;
+  height: 32px;
+  padding-left: 10px;
+}
+.m-input::placeholder {
+  font-size: 11px;
+  color: #babec5;
+  font-style: italic;
+}
+
+.m-input:focus {
+  border: 1px solid #2ca01c;
+  font-size: 13px;
+  color: #000000;
+  outline: none;
+}
+select:focus {
+  border: 1px solid #2ca01c;
+  font-size: 13px;
+  color: #000000;
+  outline: none;
+}
+
+.m-select {
+  border: 1px solid #babec5;
+  height: 33px;
+  /* padding-left: 8px; */
+  margin-top: -3px;
+}
+
+.m-input-error {
+  border: 1px #ff4747;
+}
+
+.m-label {
+  font-size: 12px;
+  font-weight: 700;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+.currency {
+  position: absolute;
+  right: 40px;
+  line-height: 80px;
+  font-style: italic;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 1px solid #babec5;
+  border-radius: 3px;
+  background-color: white;
+}
+
+input[type="checkbox"]:checked:before {
+}
+
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid rgb(219, 61, 61);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  /* top: 2px; */
+  left: 6px;
+}
+
+input[type="radio"] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radio button appearance */
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  padding: 2px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 1px solid #bbbbbb;
+  background-color: #e7e6e7;
+  border-radius: 50%;
+}
+
+/* appearance for checked radio button */
+input[type="radio"]:checked {
+  background-color: #2ca01c;
+  border: 1px solid #2ca01c;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+input[type="radio"] {
+  -ms-transform: scale(1.5); /* IE 9 */
+  -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+  transform: scale(1.5);
+}
