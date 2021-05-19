@@ -48,6 +48,7 @@
                   class="m-input"
                   ref="EmployeeCode"
                   v-model="employee.EmployeeCode"
+                  @input="checkEmployeeCodePresent($event.target.value)"
                   @blur="
                     checkBlankText([
                       { key: 'EmployeeCode', text: 'Mã không được để trống' },
@@ -421,6 +422,7 @@ export default {
         //Vị trí
         { value: "Giám đốc", text: "Giám đốc" },
         { value: "Nhân viên thực tập", text: "Nhân viên thực tập" },
+        { value: "Nhân viên", text: "Nhân viên" },
         { value: "Nhân viên chính thức", text: "Nhân viên chính thức" },
         { value: "Lễ tân", text: "Lễ tân" },
         { value: "Thực tập sinh", text: "Thực tập sinh" },
@@ -480,12 +482,14 @@ export default {
       //Validate
       this.validateToSave();
 
-      await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
-      this.isLoading = false;
-
       if (this.messageAlert != "") return;
       // lưu thông tin
       if (this.employee.EmployeeId) {
+        var check = this.checkEmployeeCodePresent();
+        if (!check) {
+          await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
+          this.isLoading = false;
+        }
         //cập nhật
         url = `${this.API_HOST}/api/v1/Employees?entityId=${this.employee.EmployeeId}`;
         await axios.put(url, this.employee);
@@ -493,6 +497,8 @@ export default {
         this.onLoadEmployee();
         this.isLoading = false;
       } else {
+        await this.checkEmployeeCodeExist(this.employee.EmployeeCode);
+        this.isLoading = false;
         //Thêm mới
         url = `${this.API_HOST}/api/v1/Employees`;
         await axios.post(url, this.employee);
@@ -617,6 +623,18 @@ export default {
             : "";
         this.iconCls = "icon-error-exits";
         this.isShowAlert = true;
+      }
+    },
+    /**
+     *Lấy mã nhân viên nhập
+     * @param employeeCode Mã nhân viên
+     * CreatedBy: tmquy(19/05/2021)
+     */
+    checkEmployeeCodePresent(employeeCode) {
+      if (employeeCode != this.employee.employeeCode) {
+        return true;
+      } else {
+        return false;
       }
     },
 
